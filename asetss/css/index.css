@@ -1,0 +1,93 @@
+:root {
+  --Primary: #B88E2F;
+  --Primary-w: #FFF3E3;
+  --primary-color: #333333;
+  --secondary-color: #666666;
+  --accent-color: #f00;
+  --background-color: #fff;
+  --white-color: #ffffff;
+  --text-color: #000;
+  --Sly-font: "Poppins", sans-serif;
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  --box-shadow-1: 0 0 10px #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--Sly-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: var(--font-weight-medium);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: var(--font-weight-bold);
+  font-size: 52px;
+  line-height: 65px;
+  color: var(--Primary);
+}
+
+h2 {
+  font-weight: var(--font-weight-bold);
+  font-size: 32px;
+  line-height: 100%;
+  color: var(--primary-color);
+}
+
+.badge {
+  font-weight: var(--font-weight-semibold);
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 3px;
+}
+
+.p1 {
+  font-weight: var(--font-weight-medium);
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+.p2 {
+  font-weight: var(--font-weight-normal);
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--secondary-color);
+}
+
+.button-XXl {
+  background-color: var(--Primary);
+  border: none;
+  color: var(--white-color);
+  padding: 25px 72px;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  align-items: center
+}
