@@ -49,3 +49,7 @@ header {
   width: 23px;
   height: max-content;
 }
+
+#userMenu {
+  display: none;
+}

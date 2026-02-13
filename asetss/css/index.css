@@ -1,12 +1,15 @@
 :root {
+  --transparent: transparent;
   --Primary: #B88E2F;
   --Primary-w: #FFF3E3;
   --primary-color: #333333;
   --secondary-color: #666666;
+  --border-input: #9F9F9F;
   --accent-color: #f00;
   --background-color: #fff;
   --white-color: #ffffff;
   --text-color: #000;
+  --dorck-color: #000;
   --Sly-font: "Poppins", sans-serif;
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
@@ -31,10 +34,16 @@ a {
   color: var(--text-color);
   font-weight: var(--font-weight-medium);
   transition: color 0.3s ease;
+  width: max-content;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -72,16 +81,47 @@ h2 {
   color: var(--secondary-color);
 }
 
-.button-XXl {
+.Dark-hollow-button {
+  background-color: var(--white-color);
+  border: 1px solid var(--dorck-color);
+  color: var(--dorck-color);
+}
+
+.Colored-hollow-button {
+  background-color: var(--white-color);
+  border: 1px solid var(--Primary);
+  color: var(--Primary);
+}
+
+.Color-button {
   background-color: var(--Primary);
   border: none;
   color: var(--white-color);
+}
+
+.button-XXl {
   padding: 25px 72px;
   font-weight: var(--font-weight-bold);
   font-size: 16px;
   line-height: 100%;
   text-transform: uppercase;
   width: max-content;
+}
+
+.button-Xl {
+  padding: 15px;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.button-s {
+  padding: 8px 15px;
+  font-weight: var(--font-weight-medium);
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
 }
 
 .section-header {
