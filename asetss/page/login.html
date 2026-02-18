@@ -5,25 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login - Furniro</title>
+  <link rel="stylesheet" href="/asetss/css/ToastNotification.css">
   <link rel="stylesheet" href="/asetss/css/login.css">
   <link rel="stylesheet" href="/asetss/css/index.css">
 </head>
 
 <body>
+  <div class="Message-boxs" id="toastContainer"></div>
   <div class="wrapper">
-    <form action="#">
+    <form action="#" id="forms">
       <div class="logo-site">
-        <a href="#" title="Nexcent">
+        <a href="../../index.html" title="Nexcent">
           <img src="/asetss/Image/svg/Furniro-logo.svg" alt="">
         </a>
       </div>
       <hr>
       <div class="input-field">
-        <input type="text" required>
+        <input type="email" id="email" required>
         <label>Enter your email</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
+        <input type="password" id="password" required>
         <label>
           Enter your password
           <span class="show-hide">
@@ -37,7 +39,7 @@
         </label>
         <a href="/asetss/page/Forgot-password.html" class="link">Forgot password?</a>
       </div>
-      <button type="submit" class="Color-button button-Xl">Log In</button>
+      <button type="submit" class="Color-button button-Xl" id="BTN">Log In</button>
       <div class="register">
         <p>Don't have an accout? <a href="/asetss/page/sign-up.html" class="link">Register</a></p>
       </div>
@@ -45,6 +47,8 @@
   </div>
   <div class="img">
   </div>
+  <script src="/asetss/js/login.js"></script>
+  <script src="/asetss/js/ToastNotification.js"></script>
 </body>
 
 </html>

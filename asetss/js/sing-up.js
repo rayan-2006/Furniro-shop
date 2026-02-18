@@ -6,8 +6,14 @@ document.getElementById("forms").addEventListener("submit", async (e) => {
   BTN.style.cursor = 'not-allowed';
   emailInput = document.getElementById("email").value.trim();
   passwordInput = document.getElementById("password").value.trim();
-  if (!emailInput || !passwordInput) {
+  passwordRInput = document.getElementById("passwordR").value.trim();
+
+  if (!emailInput || !passwordInput || !passwordRInput) {
     toast.show("Please fill in all fields", "info");
+    return;
+  }
+  if (passwordInput !== passwordRInput) {
+    toast.show("Passwords do not match", "error");
     return;
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,14 +42,13 @@ document.getElementById("forms").addEventListener("submit", async (e) => {
       }
     }
     const data = await response.json();
-    console.log("Login successful:", data);
-    toast.show("Login successful!", "success");
+    console.log("Sign-up successful:", data);
+    toast.show("Sign-up successful!", "success");
     setTimeout(() => {
       window.location.href = "../../index.html";
     }, 2000);
     form.reset();
   } catch (error) {
-    // خطاهای خاص رو مدیریت کن
     if (error.message.includes("Failed to fetch")) {
       toast.show("Network error. Please check your connection.", "error");
     } else if (error.name === "SyntaxError") {
@@ -52,7 +57,7 @@ document.getElementById("forms").addEventListener("submit", async (e) => {
       toast.show(error.message || "An error occurred", "error");
     }
   } finally {
-    BTN.innerText = "Log In"
+    BTN.innerText = "Sign Up"
     BTN.disabled = false;
     BTN.style.cursor = 'pointer';
   }

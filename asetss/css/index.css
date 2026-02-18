@@ -6,6 +6,7 @@
   --secondary-color: #666666;
   --border-input: #9F9F9F;
   --accent-color: #f00;
+  --true-color: #43a047;
   --background-color: #fff;
   --white-color: #ffffff;
   --text-color: #000;
@@ -129,5 +130,5 @@ h2 {
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
-  align-items: center
+  align-items: center;
 }

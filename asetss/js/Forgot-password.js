@@ -107,32 +107,40 @@ form.addEventListener("submit", async event => {
   if (phase === "email") {
     const enteredEmail = emailInput.value.trim();
     if (!enteredEmail) {
-      alert("Please enter your email.");
+      toast.show("Please enter your email.", "info");
       return;
     }
-
+    submitButton.disabled = true;
+    submitButton.innerText = "Checking...";
     try {
       const found = await isEmailFound(enteredEmail);
       if (!found) {
-        alert("Email not found");
+        toast.show("Email not found. Please check and try again.", "error");
+        submitButton.disabled = false;
+        submitButton.innerText = "Verify Code";
         return;
       }
       switchToCodePhase();
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      toast.show("An error occurred while checking the email. Please try again.", "error");
+    }
+    finally {
+      submitButton.disabled = false;
+      submitButton.innerText = "Verify Code";
     }
     return;
   }
 
   if (emailInput.value.trim() === currentCode) {
-    alert("Code verified successfully.");
+    toast.show("Code verified successfully!", "success");
     switchToEmailPhase();
-    window.location.href = "../../index.html";
+    setTimeout(() => {
+      window.location.href = "../../index.html";
+    }, 2000);
     return;
   }
-
-  alert("Invalid code. Try again.");
+  toast.show("Invalid code. Try again.", "error");
 });
 
 timerText.addEventListener("click", () => {

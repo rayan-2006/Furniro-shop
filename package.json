@@ -1,0 +1,24 @@
+{
+  "name": "furniro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayan-2006/Furniro-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rayan-2006/Furniro-shop/issues"
+  },
+  "homepage": "https://github.com/rayan-2006/Furniro-shop#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
