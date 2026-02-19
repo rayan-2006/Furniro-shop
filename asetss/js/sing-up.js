@@ -1,9 +1,6 @@
 document.getElementById("forms").addEventListener("submit", async (e) => {
   e.preventDefault();
   const BTN = document.getElementById("BTN");
-  BTN.innerText = "Please wait ..."
-  BTN.disabled = true;
-  BTN.style.cursor = 'not-allowed';
   emailInput = document.getElementById("email").value.trim();
   passwordInput = document.getElementById("password").value.trim();
   passwordRInput = document.getElementById("passwordR").value.trim();
@@ -21,6 +18,9 @@ document.getElementById("forms").addEventListener("submit", async (e) => {
     toast.show("Please enter a valid email", "error");
     return;
   }
+  BTN.innerText = "Please wait ..."
+  BTN.disabled = true;
+  BTN.style.cursor = 'not-allowed';
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",

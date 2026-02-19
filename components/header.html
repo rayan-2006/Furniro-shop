@@ -10,9 +10,9 @@
       <li><a href="/asetss/page/contact.html">Contact</a></li>
     </ul>
     <ul class="nav-icons">
-      <li><img src="/asetss/Image/icon/Search.svg" alt=""></li>
-      <li><img src="/asetss/Image/icon/Like.svg" alt=""></li>
-      <li><img src="/asetss/Image/icon/Shopping cart.svg" alt=""></li>
+      <li id="searchIcon"><img src="/asetss/Image/icon/Search.svg" alt=""></li>
+      <li><a href=""><img id="likeIcon" src="/asetss/Image/icon/Like.svg" alt=""></a></li>
+      <li><a href=""><img id="shoppingCartIcon" src="/asetss/Image/icon/Shopping cart.svg" alt=""></a></li>
       <li>
         <a href="/asetss/page/login.html">
           <button class="button-s Dark-hollow-button" id="loginBtn">
@@ -23,4 +23,18 @@
       </li>
     </ul>
   </div>
+  <dialog id="searchForm" class="search-modal">
+    <button type="button" id="searchDialogClose" class="search-modal-close-outside button-s Dark-hollow-button">
+      close
+    </button>
+    <div class="search-modal-panel">
+      <form action="" id="searchInputForm" class="search-form">
+        <div class="search-form-field">
+          <input type="text" id="searchInput" required>
+          <label for="searchInput">Search for your product ...</label>
+        </div>
+        <button type="submit" id="searchBtn" class="button-Xl search-action-btn">serch</button>
+      </form>
+    </div>
+  </dialog>
 </nav>

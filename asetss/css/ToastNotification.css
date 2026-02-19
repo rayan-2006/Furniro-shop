@@ -44,7 +44,7 @@
 }
 
 .Message-box.info {
-  background-color: var(--Primary-w);
+  background-color: var(--Primary);
 }
 
 .message-text {
