@@ -132,3 +132,49 @@ h2 {
   padding: 1rem;
   align-items: center;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--dorck-color);
+  background-color: var(--white-color);
+  color: var(--dorck-color);
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  background-color: var(--Primary);
+  color: var(--white-color);
+  border-color: var(--Primary);
+}
+
+.icon-btn:active {
+  transform: scale(0.98);
+}
+
+.icon-btn--circle {
+  border-radius: 999px;
+}
+
+.icon-btn__img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}

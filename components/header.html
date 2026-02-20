@@ -1,7 +1,9 @@
 <nav class="nav">
   <div class="container">
     <div class="logo">
-      <img src="/asetss/Image/icon/Furniro2.svg" alt="Furniro Logo">
+      <a href="/index.html">
+        <img src="/asetss/Image/icon/Furniro2.svg" alt="Furniro Logo">
+      </a>
     </div>
     <ul class="nav-links">
       <li><a href="/index.html">Home</a></li>
@@ -24,8 +26,9 @@
     </ul>
   </div>
   <dialog id="searchForm" class="search-modal">
-    <button type="button" id="searchDialogClose" class="search-modal-close-outside button-s Dark-hollow-button">
-      close
+    <button type="button" id="searchDialogClose" class="search-modal-close-outside icon-btn icon-btn--circle">
+      <img class="icon-btn__img" src="https://www.svgrepo.com/show/522506/close.svg" alt="" aria-hidden="true">
+      <span class="sr-only">Close</span>
     </button>
     <div class="search-modal-panel">
       <form action="" id="searchInputForm" class="search-form">
@@ -35,6 +38,7 @@
         </div>
         <button type="submit" id="searchBtn" class="button-Xl search-action-btn">serch</button>
       </form>
+      <div id="searchResults" class="search-results"></div>
     </div>
   </dialog>
 </nav>

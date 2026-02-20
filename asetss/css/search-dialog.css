@@ -5,6 +5,21 @@
   padding: 0;
   background: transparent;
   overflow: visible;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.search-modal[open] {
+  opacity: 1;
+}
+
+.search-modal.is-closing {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-8px);
 }
 
 #searchIcon {
@@ -13,7 +28,9 @@
 
 .search-modal::backdrop {
   background: rgba(0, 0, 0, 0.28);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+  transition: opacity 0.2s ease;
 }
 
 .search-modal-panel {
@@ -21,6 +38,9 @@
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .search-form {
@@ -58,8 +78,8 @@
   padding: 10px;
 }
 
-.search-form-field input:focus ~ label,
-.search-form-field input:valid ~ label {
+.search-form-field input:focus~label,
+.search-form-field input:valid~label {
   font-size: 16px;
   top: 1px;
   background-color: var(--background-color);
@@ -84,6 +104,56 @@
   border: 1px solid var(--Primary);
 }
 
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.search-results-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+.search-results-item img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.search-results-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.search-results-name {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--primary-color);
+}
+
+.search-results-price {
+  font-size: 13px;
+  color: var(--secondary-color);
+}
+
+.search-results-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
 .search-modal-close-outside {
   position: absolute;
   top: -42px;
@@ -102,6 +172,10 @@
 
   .search-action-btn {
     width: 100%;
+  }
+
+  .search-results {
+    grid-template-columns: 1fr;
   }
 
   .search-modal-close-outside {
