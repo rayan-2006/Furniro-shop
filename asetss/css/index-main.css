@@ -19,3 +19,20 @@
   gap: 2rem;
   margin: 10rem;
 }
+
+.Category-boxs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Category-box {
+  width: 35%;
+  height: 40rem;
+  background-color: red;
+}
+
+.Category-box-img {
+  height: 85%;
+  border-radius: 10px;
+}
