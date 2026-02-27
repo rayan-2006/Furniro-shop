@@ -1,40 +1,63 @@
 :root {
-  --transparent: transparent;
-  --Primary: #B88E2F;
-  --Primary-w: #FFF3E3;
-  --primary-color: #333333;
-  --secondary-color: #666666;
-  --border-input: #9F9F9F;
-  --accent-color: #f00;
-  --true-color: #43a047;
-  --background-color: #fff;
-  --white-color: #ffffff;
-  --text-color: #000;
-  --dorck-color: #000;
-  --Sly-font: "Poppins", sans-serif;
-  --font-weight-thin: 100;
-  --font-weight-extralight: 200;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-  --font-weight-black: 900;
-  --box-shadow-1: 0 0 10px #333;
+  --color-transparent: transparent;
+  --color-brand-primary: #B88E2F;
+  --color-brand-surface: #FFF3E3;
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-border-input: #9F9F9F;
+  --color-status-error: #f00;
+  --color-status-success: #43a047;
+  --color-bg-page: #fff;
+  --color-white: #ffffff;
+  --color-text-base: #000;
+  --color-black: #000;
+  --font-family-base: "Poppins", sans-serif;
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-display: 52px;
+  --line-height-tight: 100%;
+  --line-height-base: 24px;
+  --line-height-display: 65px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+  --transition-fast: 0.1s ease;
+  --transition-input: all 0.15s ease;
+  --transition-fade: opacity 0.2s ease;
+  --transition-modal: opacity 0.2s ease, transform 0.2s ease;
+  --transition-link: color 0.3s ease;
+  --transition-button: background-color 0.3s ease, color 0.3s ease;
+  --transition-toast: transform 0.4s ease, opacity 0.4s ease;
+  --shadow-sm: 0 0 10px #333;
 }
 
 * {
   padding: 0;
   margin: 0;
-  font-family: var(--Sly-font);
+  font-family: var(--font-family-base);
 }
 
 a {
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: var(--font-weight-medium);
-  transition: color 0.3s ease;
+  color: var(--color-text-base);
+  font-weight: var(--font-weight-500);
+  transition: var(--transition-link);
   width: max-content;
 }
 
@@ -44,21 +67,21 @@ a:hover {
 
 button {
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: var(--transition-button);
 }
 
 h1 {
-  font-weight: var(--font-weight-bold);
-  font-size: 52px;
-  line-height: 65px;
-  color: var(--Primary);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+  color: var(--color-brand-primary);
 }
 
 h2 {
-  font-weight: var(--font-weight-bold);
-  font-size: 32px;
-  line-height: 100%;
-  color: var(--primary-color);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
 }
 
 .padding-1 {
@@ -66,67 +89,84 @@ h2 {
 }
 
 .badge {
-  font-weight: var(--font-weight-semibold);
-  font-size: 16px;
-  line-height: 100%;
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
   letter-spacing: 3px;
 }
 
 .p1 {
-  font-weight: var(--font-weight-medium);
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--primary-color);
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
 }
 
 .p2 {
-  font-weight: var(--font-weight-normal);
-  font-size: 20px;
-  line-height: 100%;
-  color: var(--secondary-color);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-secondary);
 }
 
 .Dark-hollow-button {
-  background-color: var(--white-color);
-  border: 1px solid var(--dorck-color);
-  color: var(--dorck-color);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
 }
 
 .Colored-hollow-button {
-  background-color: var(--white-color);
-  border: 1px solid var(--Primary);
-  color: var(--Primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-brand-primary);
+  color: var(--color-brand-primary);
 }
 
 .Color-button {
-  background-color: var(--Primary);
+  background-color: var(--color-brand-primary);
   border: none;
-  color: var(--white-color);
+  color: var(--color-white);
+}
+
+.Light-button {
+  background-color: var(--color-white);
+  border: none;
+  color: var(--color-brand-primary);
 }
 
 .button-XXl {
   padding: 25px 72px;
-  font-weight: var(--font-weight-bold);
-  font-size: 16px;
-  line-height: 100%;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
   text-transform: uppercase;
   width: max-content;
 }
 
 .button-Xl {
   padding: 15px;
-  font-weight: var(--font-weight-bold);
-  font-size: 16px;
-  line-height: 100%;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
   text-transform: uppercase;
 }
 
 .button-s {
   padding: 8px 15px;
-  font-weight: var(--font-weight-medium);
-  font-size: 12px;
-  line-height: 100%;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
   text-transform: uppercase;
+}
+
+.button-m {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
 }
 
 
@@ -134,8 +174,8 @@ h2 {
 .section-header {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 4rem 0 4rem 0;
   align-items: center;
 }
 
@@ -157,18 +197,18 @@ h2 {
   justify-content: center;
   width: 36px;
   height: 36px;
-  border-radius: 10px;
-  border: 1px solid var(--dorck-color);
-  background-color: var(--white-color);
-  color: var(--dorck-color);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 0;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .icon-btn:hover {
-  background-color: var(--Primary);
-  color: var(--white-color);
-  border-color: var(--Primary);
+  background-color: var(--color-brand-primary);
+  color: var(--color-white);
+  border-color: var(--color-brand-primary);
 }
 
 .icon-btn:active {
@@ -176,7 +216,7 @@ h2 {
 }
 
 .icon-btn--circle {
-  border-radius: 999px;
+  border-radius: var(--radius-full);
 }
 
 .icon-btn__img {
@@ -204,7 +244,7 @@ h2 {
 .Shimmer-effect {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background-color: #c5c5c5;
 }
 

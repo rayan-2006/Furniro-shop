@@ -88,11 +88,55 @@
       <div class="Category-boxs padding-1" id="CategoryBoxs">
       </div>
     </div>
+    <section class="our-products padding-1" aria-labelledby="our-products-title">
+      <h2 id="our-products-title" class="our-products__title">Our Products</h2>
+      <div class="products-grid" id="ProductsGrid"></div>
+      <div class="our-products__actions">
+        <button type="button" class="button-m Colored-hollow-button our-products__show-more">Show More</button>
+      </div>
+    </section>
+    <section class="room-inspiration" aria-labelledby="room-inspiration-title">
+      <div class="room-inspiration__container padding-1">
+        <div class="room-inspiration__content">
+          <h2 id="room-inspiration-title">50+ Beautiful rooms inspiration</h2>
+          <p>Our designer already made a lot of beautiful prototype of rooms that inspire you</p>
+          <button type="button" class="button-m Color-button room-inspiration__cta">Explore More</button>
+        </div>
+        <div class="room-slider" id="RoomSlider">
+          <article class="room-slide room-slide--primary">
+            <img id="RoomMainImage" src="/asetss/Image/Photo/word-image-17-1536x1125.png" alt="Bedroom inspiration">
+            <div class="room-slide__caption">
+              <div class="room-slide__meta">
+                <span id="RoomSlideIndex">01</span>
+                <span class="room-slide__line"></span>
+                <span id="RoomSlideType">Bed Room</span>
+              </div>
+              <h3 id="RoomSlideTitle">Inner Peace</h3>
+              <button type="button" class="room-slide__arrow" aria-label="Room action">&rarr;</button>
+            </div>
+          </article>
+          <article class="room-slide room-slide--secondary">
+            <img id="RoomNextImage" src="/asetss/Image/Photo/word-image-15.png" alt="Dining room inspiration">
+            <button type="button" class="room-slide__next icon-btn icon-btn--circle" id="RoomNextButton"
+              aria-label="Next room">&rsaquo;</button>
+          </article>
+          <div class="room-slider-dots" id="RoomSliderDots" aria-label="Room slider position">
+            <button type="button" class="room-slider-dots__dot room-slider-dots__dot--active" data-index="0"
+              aria-label="Go to slide 1"></button>
+            <button type="button" class="room-slider-dots__dot" data-index="1" aria-label="Go to slide 2"></button>
+            <button type="button" class="room-slider-dots__dot" data-index="2" aria-label="Go to slide 3"></button>
+            <button type="button" class="room-slider-dots__dot" data-index="3" aria-label="Go to slide 4"></button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="/asetss/js/auth.js"></script>
   <script src="/asetss/js/layout.js"></script>
   <script src="/asetss/js/header.js"></script>
   <script src="/asetss/js/Category-mine.js"></script>
+  <script src="/asetss/js/home-products.js"></script>
+  <script src="/asetss/js/room-slider.js"></script>
 </body>
 
 </html>

@@ -2,14 +2,12 @@
   {
     "name": "Sofas",
     "displayName": "مبل و کاناپه",
-    "heroImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80",
-    "description": "مبل‌های راحت برای فضای نشیمن"
+    "heroImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80"
   },
   {
     "name": "Dining Tables",
     "displayName": "میز ناهارخوری",
-    "heroImage": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1600&q=80",
-    "description": "میزهای شیک برای دورهمی"
+    "heroImage": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1600&q=80"
   },
   {
     "name": "Dining Chairs",
