@@ -204,6 +204,7 @@ h2 {
 .Shimmer-effect {
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
   background-color: #c5c5c5;
 }
 
@@ -219,8 +220,6 @@ h2 {
   box-shadow: 0 0 50px 35px rgb(255, 255, 255);
   animation: Shimmer-effect-animation 3s ease infinite;
 }
-
-
 
 @keyframes Shimmer-effect-animation {
   0% {
