@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as v;
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: v.$radius-md;
+  border: 1px solid v.$color-black;
+  background-color: v.$color-white;
+  color: v.$color-black;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: v.$color-brand-primary;
+    color: v.$color-white;
+    border-color: v.$color-brand-primary;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &--circle {
+    border-radius: v.$radius-full;
+  }
+
+  &__img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+}

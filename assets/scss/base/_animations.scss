@@ -1,0 +1,31 @@
+@use"../abstracts/variables" as v;
+
+.Shimmer-effect {
+  position: relative;
+  overflow: hidden;
+  border-radius: v.$radius-sm;
+  background-color: #c5c5c5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateY(-100%) rotatez(45deg);
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 150%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px 35px rgb(255, 255, 255);
+    animation: Shimmer-effect-animation 3s ease infinite;
+  }
+}
+
+@keyframes Shimmer-effect-animation {
+  0% {
+    transform: translateY(-100%) rotatez(45deg);
+  }
+
+  100% {
+    transform: translateY(150%) rotatez(45deg);
+  }
+}

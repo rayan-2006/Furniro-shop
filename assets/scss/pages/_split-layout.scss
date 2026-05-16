@@ -1,0 +1,37 @@
+// ============================================
+// Pages - Split Layout (Login/Signup/Forgot Password) - Shared styles
+// Migrated from login.css, sign-up.css, Forgot-password.css
+// ============================================
+
+body {
+  display: flex;
+}
+
+.wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 60%;
+    height: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.logo-site {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 80px;
+  }
+
+  a {
+    width: max-content;
+  }
+}

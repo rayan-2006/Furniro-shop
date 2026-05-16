@@ -1,0 +1,28 @@
+// ============================================
+// Main Entry Point - For the main/index page
+// This file compiles to: assets/css/home.css
+// ============================================
+
+// 1. Abstracts (Variables, Mixins, Functions)
+@use "./abstracts/variables";
+
+// 2. Base (Reset, Typography, Animations)
+@use "./base/reset";
+@use "./base/global";
+@use "./base/typography";
+@use "./base/animations";
+
+// 3. Components (Reusable components)
+@use "./components/buttons";
+@use "./components/icons";
+@use "./components/search-dialog";
+@use "./components/toast";
+
+// 4. Layout (Header, Footer, etc.)
+@use "./layout/header";
+
+// 5. Pages (Main page specific styles)
+@use"./pages/home";
+@use "./pages/hero";
+@use "./pages/categories";
+@use "./pages/products";

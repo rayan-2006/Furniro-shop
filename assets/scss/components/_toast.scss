@@ -1,0 +1,88 @@
+@use"../abstracts/variables" as v;
+@use"../abstracts/function" as f;
+@use"../abstracts/mixins" as m;
+
+
+.Message-boxs {
+  width: 25%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.Message-box {
+  display: flex;
+  position: relative;
+  margin: 10px;
+  border-radius: v.$radius-sm;
+  align-items: center;
+  width: 350px;
+  min-height: 60px;
+  overflow: hidden;
+  pointer-events: auto;
+  transform: translateX(-400px);
+  opacity: 0;
+  transition: v.$transition-toast;
+
+  &.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &.hide {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+
+  &.error {
+    background-color: v.$color-status-error;
+  }
+
+  &.success {
+    background-color: v.$color-status-success;
+  }
+
+  &.info {
+    background-color: v.$color-brand-primary;
+  }
+}
+
+.message-text {
+  width: 100%;
+
+  p {
+    color: v.$color-white;
+    padding: 10px;
+    width: 85%;
+  }
+}
+
+.bar {
+  height: 4px;
+  background-color: v.$color-bg-page;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.close-message {
+  width: 30px;
+  height: 30px;
+  border-radius: v.$radius-sm;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: v.$font-size-xl;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+  color: white;
+  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0.34);
+}

@@ -1,0 +1,395 @@
+@use "../abstracts/variables" as *;
+
+/* ================= HERO / BANNER ================= */
+
+.baner {
+  background-image: url("/assets/Image/Photo/scandinavian-interior-mockup-wall-decal-background 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 794px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.hero-content {
+  background-color: $color-brand-surface;
+  width: 500px;
+  height: max-content;
+  padding: 41px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 10rem;
+}
+
+/* ================= CATEGORY ================= */
+
+.Category-boxs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.Category-box {
+  flex: 0 0 455px;
+  height: 40rem;
+  text-align: center;
+
+  &-img {
+    height: 85%;
+    border-radius: $radius-md;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $radius-lg;
+    }
+  }
+
+  &-text {
+    display: flex;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      min-width: 100px;
+      width: max-content;
+      min-height: 35px;
+      font-weight: $font-weight-600;
+      font-size: $font-size-2xl;
+      line-height: $line-height-tight;
+      color: $color-text-primary;
+    }
+  }
+}
+
+/* ================= PRODUCTS ================= */
+
+.our-products {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__show-more {
+    width: 245px;
+  }
+}
+
+.products-grid {
+  max-width: 1236px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card {
+  position: relative;
+  background-color: #f4f5f7;
+  overflow: hidden;
+
+  &__media {
+    position: relative;
+    height: 301px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    min-width: 48px;
+    height: 48px;
+    border-radius: $radius-full;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-500;
+    color: $color-white;
+
+    &--discount {
+      background-color: #e97171;
+    }
+
+    &--new {
+      background-color: #2ec1ac;
+    }
+  }
+
+  &__info {
+    padding: 1rem 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__name {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-600;
+    line-height: 1.2;
+    color: #3a3a3a;
+  }
+
+  &__desc {
+    font-size: $font-size-base;
+    font-weight: $font-weight-500;
+    line-height: 1.5;
+    color: #898989;
+  }
+
+  &__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  &__price {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-600;
+    color: #3a3a3a;
+  }
+
+  &__old-price {
+    font-size: $font-size-base;
+    font-weight: $font-weight-400;
+    color: #b0b0b0;
+    text-decoration: line-through;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(67, 67, 67, 0.57);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 3;
+  }
+
+  &:hover &__overlay,
+  &:focus-within &__overlay {
+    opacity: 1;
+  }
+
+  &__add-btn {
+    min-width: 202px;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    &-item {
+      border: none;
+      background: transparent;
+      color: $color-white;
+      font-size: $font-size-base;
+      font-weight: $font-weight-600;
+    }
+  }
+}
+
+/* ================= ROOM INSPIRATION ================= */
+
+.room-inspiration {
+  background-color: #fcf8f3;
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    min-height: 582px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.5rem;
+
+    h2 {
+      max-width: 360px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0.5rem 0 1.5rem;
+      max-width: 350px;
+      color: $color-text-secondary;
+      font-size: $font-size-base;
+      font-weight: $font-weight-500;
+    }
+  }
+
+  &__cta {
+    min-width: 176px;
+  }
+}
+
+/* ================= SLIDER ================= */
+
+.room-slider {
+  width: 65%;
+  min-height: 582px;
+}
+
+.room-slide {
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--primary {
+    width: 523px;
+    height: 582px;
+  }
+
+  &--secondary {
+    width: 372px;
+    height: 486px;
+  }
+
+  &__caption {
+    h3 {
+      margin-top: 0.5rem;
+      color: #3a3a3a;
+      font-size: 28px;
+      font-weight: $font-weight-600;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: -48px;
+    bottom: 0;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background-color: $color-brand-primary;
+    color: $color-white;
+  }
+}
+
+/* ================= DOTS ================= */
+
+.room-slider-dots {
+  display: flex;
+  gap: 0.75rem;
+
+  &__dot {
+    width: 11px;
+    height: 11px;
+    border-radius: $radius-full;
+    background-color: #d8d8d8;
+    cursor: pointer;
+
+    &--active {
+      width: 27px;
+      height: 27px;
+      border: 1px solid $color-brand-primary;
+      background-color: transparent;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-radius: $radius-full;
+        background-color: $color-brand-primary;
+      }
+    }
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes roomImageIn {
+  from {
+    opacity: 0.45;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes roomCaptionIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .room-inspiration__container {
+    flex-direction: column;
+  }
+
+  .room-slider {
+    width: 100%;
+  }
+}
+
+@media (max-width:920px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:620px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card__media {
+    height: 280px;
+  }
+}

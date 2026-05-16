@@ -50,17 +50,15 @@
     rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/asetss/Image/logo/Furniro.ico">
+  <link rel="icon" type="image/png" href="/assets/Image/logo/Furniro.ico">
 
   <!-- Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/asetss/css/header.css">
-  <link rel="stylesheet" href="/asetss/css/search-dialog.css">
-  <link rel="stylesheet" href="/asetss/css/index.css">
-  <link rel="stylesheet" href="/asetss/css/index-main.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+
 </head>
 
 <body>
@@ -95,48 +93,36 @@
         <button type="button" class="button-m Colored-hollow-button our-products__show-more">Show More</button>
       </div>
     </section>
-    <section class="room-inspiration" aria-labelledby="room-inspiration-title">
-      <div class="room-inspiration__container padding-1">
+    <section class="room-inspiration padding-2" aria-labelledby="room-inspiration-title">
+      <div class="room-inspiration__container ">
         <div class="room-inspiration__content">
           <h2 id="room-inspiration-title">50+ Beautiful rooms inspiration</h2>
           <p>Our designer already made a lot of beautiful prototype of rooms that inspire you</p>
-          <button type="button" class="button-m Color-button room-inspiration__cta">Explore More</button>
+          <a href="#">
+            <button type="button" class="button-m Color-button room-inspiration__cta">Explore More</button>
+          </a>
         </div>
         <div class="room-slider" id="RoomSlider">
-          <article class="room-slide room-slide--primary">
-            <img id="RoomMainImage" src="/asetss/Image/Photo/word-image-17-1536x1125.png" alt="Bedroom inspiration">
-            <div class="room-slide__caption">
-              <div class="room-slide__meta">
-                <span id="RoomSlideIndex">01</span>
-                <span class="room-slide__line"></span>
-                <span id="RoomSlideType">Bed Room</span>
-              </div>
-              <h3 id="RoomSlideTitle">Inner Peace</h3>
-              <button type="button" class="room-slide__arrow" aria-label="Room action">&rarr;</button>
+          <div class="slide" id="slide"></div>
+          <div class="slide-bor">
+            <div class="room-slider-dots" id="RoomSliderDots" aria-label="Room slider position">
+              <button type="button" class="room-slider-dots__dot room-slider-dots__dot--active" data-index="0"
+                aria-label="Go to slide 1"></button>
+              <button type="button" class="room-slider-dots__dot" data-index="1" aria-label="Go to slide 2"></button>
+              <button type="button" class="room-slider-dots__dot" data-index="2" aria-label="Go to slide 3"></button>
+              <button type="button" class="room-slider-dots__dot" data-index="3" aria-label="Go to slide 4"></button>
             </div>
-          </article>
-          <article class="room-slide room-slide--secondary">
-            <img id="RoomNextImage" src="/asetss/Image/Photo/word-image-15.png" alt="Dining room inspiration">
-            <button type="button" class="room-slide__next icon-btn icon-btn--circle" id="RoomNextButton"
-              aria-label="Next room">&rsaquo;</button>
-          </article>
-          <div class="room-slider-dots" id="RoomSliderDots" aria-label="Room slider position">
-            <button type="button" class="room-slider-dots__dot room-slider-dots__dot--active" data-index="0"
-              aria-label="Go to slide 1"></button>
-            <button type="button" class="room-slider-dots__dot" data-index="1" aria-label="Go to slide 2"></button>
-            <button type="button" class="room-slider-dots__dot" data-index="2" aria-label="Go to slide 3"></button>
-            <button type="button" class="room-slider-dots__dot" data-index="3" aria-label="Go to slide 4"></button>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <script src="/asetss/js/auth.js"></script>
-  <script src="/asetss/js/layout.js"></script>
-  <script src="/asetss/js/header.js"></script>
-  <script src="/asetss/js/Category-mine.js"></script>
-  <script src="/asetss/js/home-products.js"></script>
-  <script src="/asetss/js/room-slider.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script src="/assets/js/layout.js"></script>
+  <script src="/assets/js/header.js"></script>
+  <script src="/assets/js/Category-mine.js"></script>
+  <script src="/assets/js/home-products.js"></script>
+  <script src="/assets/js/room-slider.js"></script>
 </body>
 
 </html>

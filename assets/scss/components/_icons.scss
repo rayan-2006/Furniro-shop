@@ -1,0 +1,35 @@
+@use"../abstracts/variables" as v;
+@use"../abstracts/function" as f;
+@use"../abstracts/mixins" as m;
+
+.icon-btn {
+  @include m.flex-content(row, center, center, inline-flex);
+  width: f.to-rem(36px);
+  height: f.to-rem(36px);
+  border-radius: v.$radius-md;
+  border: 1px solid v.$color-black;
+  background-color: v.$color-white;
+  color: v.$color-black;
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: v.$color-brand-primary;
+    color: v.$color-white;
+    border-color: v.$color-brand-primary;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.icon-btn--circle {
+  border-radius: v.$radius-full;
+}
+
+.icon-btn__img {
+  width: f.to-rem(16px);
+  height: f.to-rem(16px);
+  display: block;
+}
