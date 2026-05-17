@@ -2,17 +2,20 @@
   {
     "name": "Sofas",
     "displayName": "مبل و کاناپه",
-    "heroImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80"
+    "heroImage1": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80",
+    "heroImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTny9ramLaQ-tGdK9oxwIll2J30dNP1io5axg&s"
   },
   {
     "name": "Dining Tables",
     "displayName": "میز ناهارخوری",
-    "heroImage": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1600&q=80"
+    "heroImage1": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1600&q=80",
+    "heroImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC_l8D2k-QRH_gcefZYlmUiyd6IWkjV3uafQ&s"
   },
   {
     "name": "Dining Chairs",
     "displayName": "صندلی ناهارخوری",
-    "heroImage": "https://images.unsplash.com/photo-1589389556857-95d6a0a5a8d8?auto=format&fit=crop&w=1600&q=80"
+    "heroImage1": "https://images.unsplash.com/photo-1589389556857-95d6a0a5a8d8?auto=format&fit=crop&w=1600&q=80",
+    "heroImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-okNmyzz7o1vrBXu0YAkMqH5Oe5uRLzKptQ&s"
   },
   {
     "name": "Beds",

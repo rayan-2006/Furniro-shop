@@ -21,17 +21,18 @@ function createProductCard(product, index) {
 
   const shortDescription = product.short_description || product.category || "";
 
-  card.innerHTML = `
+  card.innerHTML = /* html */`
+  <a class="product-card__link" href="assets/page/product.html?id=${product.product_id}" aria-label="View ${product.name}"></a>
     <div class="product-card__media">
       <img src="${product.main_image}" alt="${product.name}" loading="lazy">
-      ${promo ? `<span class="product-card__badge product-card__badge--${promo.type}">${promo.value}</span>` : ""}
+      ${promo ? /* html */`<span class="product-card__badge product-card__badge--${promo.type}">${promo.value}</span>` : ""}
     </div>
     <div class="product-card__info">
       <h3 class="product-card__name">${product.name}</h3>
       <p class="product-card__desc">${shortDescription}</p>
       <div class="product-card__price-row">
         <span class="product-card__price">${currentPrice}</span>
-        ${oldPrice ? `<span class="product-card__old-price">${oldPrice}</span>` : ""}
+        ${oldPrice ? /* html */`<span class="product-card__old-price">${oldPrice}</span>` : ""}
       </div>
     </div>
     <div class="product-card__overlay">
@@ -43,6 +44,7 @@ function createProductCard(product, index) {
       </div>
     </div>
   `;
+
 
   return card;
 }
@@ -64,7 +66,7 @@ async function loadHomeProducts() {
     });
   } catch (error) {
     console.error("Error loading home products:", error);
-    productsGrid.innerHTML = `<p class="text-danger">Failed to load products.</p>`;
+    productsGrid.innerHTML = /* html */`<p class="text-danger">Failed to load products.</p>`;
   }
 }
 

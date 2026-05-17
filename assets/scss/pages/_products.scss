@@ -1,6 +1,6 @@
-// ============================================
-// Pages - Products - Migrated from index-main.css
-// ============================================
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/function" as f;
 
 .our-products {
   padding-top: 3rem;
@@ -27,17 +27,28 @@
   margin: 0 auto;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .product-card {
   position: relative;
-  background-color: #f4f5f7;
+  background-color: v.$card-background-color;
   overflow: hidden;
+  height: 500px;
+
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+
 
   &__media {
     position: relative;
-    height: 301px;
+    height: 70%;
+    ;
 
     img {
       width: 100%;
@@ -51,43 +62,41 @@
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    min-width: 48px;
-    height: 48px;
-    border-radius: var(--radius-full);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    min-width: f.to-rem(48px);
+    height: f.to-rem(48px);
+    border-radius: v.$radius-full;
+    @include m.flex-content(null, center, center, inline-flex);
     padding: 0 0.5rem;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-500);
-    color: var(--color-white);
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-500;
+    color: v.$color-white;
 
     &--discount {
-      background-color: #e97171;
+      background-color: v.$badge-discount-bg;
     }
 
     &--new {
-      background-color: #2ec1ac;
+      background-color: v.$badge-new-bg;
     }
   }
 
   &__info {
     padding: 1rem 1rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    @include m.flex-content(column);
+    height: 32%;
+    justify-content: space-between;
   }
 
   &__name {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-600);
+    font-size: v.$font-size-xl;
+    font-weight: v.$font-weight-600;
     line-height: 1.2;
-    color: #3a3a3a;
+    color: v.$color-text-primary;
   }
 
   &__desc {
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-500);
+    font-size: v.$font-size-base;
+    font-weight: v.$font-weight-500;
     line-height: 1.5;
     color: #898989;
   }
@@ -99,14 +108,14 @@
   }
 
   &__price {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-600);
+    font-size: v.$font-size-xl;
+    font-weight: v.$font-weight-600;
     color: #3a3a3a;
   }
 
   &__old-price {
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-400);
+    font-size: v.$font-size-base;
+    font-weight: v.$font-weight-400;
     color: #b0b0b0;
     text-decoration: line-through;
   }
@@ -123,6 +132,12 @@
     opacity: 0;
     transition: opacity 0.25s ease;
     z-index: 3;
+    pointer-events: none;
+
+    & button {
+      position: relative;
+      pointer-events: auto;
+    }
   }
 
   &:hover &__overlay,
@@ -143,30 +158,36 @@
   &__meta-item {
     border: none;
     background: transparent;
-    color: var(--color-white);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-600);
+    color: v.$color-white;
+    font-size: v.$font-size-base;
+    font-weight: v.$font-weight-600;
   }
 }
 
-@media (max-width: 1200px) {
-  .products-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+@media (max-width: 768px) {
+  .product-card__overlay {
+    display: none;
   }
 }
 
-@media (max-width: 920px) {
-  .products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+// @media (max-width: 1200px) {
+//   .products-grid {
+//     grid-template-columns: repeat(3, minmax(0, 1fr));
+//   }
+// }
 
-@media (max-width: 620px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
+// @media (max-width: 920px) {
+//   .products-grid { 
+//     grid-template-columns: repeat(2, minmax(0, 1fr));
+//   }
+// }
 
-  .product-card__media {
-    height: 280px;
-  }
-}
+// @media (max-width: 620px) {
+//   .products-grid {
+//     grid-template-columns: 1fr;
+//   }
+
+//   .product-card__media {
+//     height: 280px;
+//   }
+// }

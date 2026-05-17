@@ -1,9 +1,9 @@
-// ============================================
-// Pages - Hero/Banner - Migrated from index-main.css
-// ============================================
+@use "../abstracts/variables" as *;
+
+/* ================= HERO / BANNER ================= */
 
 .baner {
-  background-image: url(/assets/Image/Photo/scandinavian-interior-mockup-wall-decal-background\ 1.png);
+  background-image: url("/assets/Image/Photo/scandinavian-interior-mockup-wall-decal-background 1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,7 +14,7 @@
 }
 
 .hero-content {
-  background-color: var(--color-brand-surface);
+  background-color: $color-brand-surface;
   width: 500px;
   height: max-content;
   padding: 41px;

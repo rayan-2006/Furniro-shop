@@ -1,71 +1,50 @@
-@use "../abstracts/variables" as *;
-
-/* ================= HERO / BANNER ================= */
-
-.baner {
-  background-image: url("/assets/Image/Photo/scandinavian-interior-mockup-wall-decal-background 1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 794px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.hero-content {
-  background-color: $color-brand-surface;
-  width: 500px;
-  height: max-content;
-  padding: 41px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 10rem;
-}
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/function" as f;
 
 /* ================= CATEGORY ================= */
 
 .Category-boxs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  // align-items: center;
+  // justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 }
 
 .Category-box {
-  flex: 0 0 455px;
-  height: 40rem;
-  text-align: center;
+  // flex: 1 1 455px;
+  // height: 40rem;
+  // text-align: center;
 
-  &-img {
-    height: 85%;
-    border-radius: $radius-md;
+  // &-img {
+  //   height: 85%;
+  //   border-radius: v.$radius-md;
 
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: $radius-lg;
-    }
-  }
+  //   img {
+  //     width: 100%;
+  //     height: 100%;
+  //     border-radius: v.$radius-lg;
+  //   }
+  // }
 
-  &-text {
-    display: flex;
-    height: 15%;
-    align-items: center;
-    justify-content: center;
+  // &-text {
+  //   display: flex;
+  //   height: 15%;
+  //   align-items: center;
+  //   justify-content: center;
 
-    p {
-      min-width: 100px;
-      width: max-content;
-      min-height: 35px;
-      font-weight: $font-weight-600;
-      font-size: $font-size-2xl;
-      line-height: $line-height-tight;
-      color: $color-text-primary;
-    }
-  }
+  //   p {
+  //     min-width: 100px;
+  //     width: max-content;
+  //     min-height: 35px;
+  //     font-weight: v.$font-weight-600;
+  //     font-size: v.$font-size-2xl;
+  //     line-height: v.$line-height-tight;
+  //     color: v.$color-text-primary;
+  //   }
+  // }
 }
 
 /* ================= PRODUCTS ================= */
@@ -123,14 +102,14 @@
     right: 1.5rem;
     min-width: 48px;
     height: 48px;
-    border-radius: $radius-full;
+    border-radius: v.$radius-full;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0 0.5rem;
-    font-size: $font-size-sm;
-    font-weight: $font-weight-500;
-    color: $color-white;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-500;
+    color: v.$color-white;
 
     &--discount {
       background-color: #e97171;
@@ -149,15 +128,15 @@
   }
 
   &__name {
-    font-size: $font-size-xl;
-    font-weight: $font-weight-600;
+    font-size: v.$font-size-xl;
+    font-weight: v.$font-weight-600;
     line-height: 1.2;
     color: #3a3a3a;
   }
 
   &__desc {
-    font-size: $font-size-base;
-    font-weight: $font-weight-500;
+    font-size: v.$font-size-base;
+    font-weight: v.$font-weight-500;
     line-height: 1.5;
     color: #898989;
   }
@@ -169,14 +148,14 @@
   }
 
   &__price {
-    font-size: $font-size-xl;
-    font-weight: $font-weight-600;
+    font-size: v.$font-size-xl;
+    font-weight: v.$font-weight-600;
     color: #3a3a3a;
   }
 
   &__old-price {
-    font-size: $font-size-base;
-    font-weight: $font-weight-400;
+    font-size: v.$font-size-base;
+    font-weight: v.$font-weight-400;
     color: #b0b0b0;
     text-decoration: line-through;
   }
@@ -212,9 +191,9 @@
     &-item {
       border: none;
       background: transparent;
-      color: $color-white;
-      font-size: $font-size-base;
-      font-weight: $font-weight-600;
+      color: v.$color-white;
+      font-size: v.$font-size-base;
+      font-weight: v.$font-weight-600;
     }
   }
 }
@@ -247,9 +226,9 @@
     p {
       margin: 0.5rem 0 1.5rem;
       max-width: 350px;
-      color: $color-text-secondary;
-      font-size: $font-size-base;
-      font-weight: $font-weight-500;
+      color: v.$color-text-secondary;
+      font-size: v.$font-size-base;
+      font-weight: v.$font-weight-500;
     }
   }
 
@@ -291,7 +270,7 @@
       margin-top: 0.5rem;
       color: #3a3a3a;
       font-size: 28px;
-      font-weight: $font-weight-600;
+      font-weight: v.$font-weight-600;
     }
   }
 
@@ -302,8 +281,8 @@
     width: 48px;
     height: 48px;
     border: none;
-    background-color: $color-brand-primary;
-    color: $color-white;
+    background-color: v.$color-brand-primary;
+    color: v.$color-white;
   }
 }
 
@@ -316,14 +295,14 @@
   &__dot {
     width: 11px;
     height: 11px;
-    border-radius: $radius-full;
+    border-radius: v.$radius-full;
     background-color: #d8d8d8;
     cursor: pointer;
 
     &--active {
       width: 27px;
       height: 27px;
-      border: 1px solid $color-brand-primary;
+      border: 1px solid v.$color-brand-primary;
       background-color: transparent;
 
       &::after {
@@ -331,8 +310,8 @@
         position: absolute;
         width: 11px;
         height: 11px;
-        border-radius: $radius-full;
-        background-color: $color-brand-primary;
+        border-radius: v.$radius-full;
+        background-color: v.$color-brand-primary;
       }
     }
   }

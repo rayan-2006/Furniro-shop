@@ -12,7 +12,7 @@ class ToastManager {
     const toast = document.createElement("div");
     toast.className = `Message-box ${type}`;
 
-    toast.innerHTML = `
+    toast.innerHTML = /*html*/`
       <div class="message-text">
         <p>${message}</p>
         <div class="bar"></div>

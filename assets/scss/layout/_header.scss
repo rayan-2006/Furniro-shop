@@ -4,6 +4,7 @@
 
 header {
   position: sticky;
+  z-index: 1000;
   top: 0;
   background-color: v.$color-bg-page;
 }
